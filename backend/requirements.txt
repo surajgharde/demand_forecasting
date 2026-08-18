@@ -1,0 +1,32 @@
+# Demand Forecasting API — Core Dependencies
+# ============================================
+# Install in a clean Python virtualenv:
+#   python -m venv .venv
+#   .venv\Scripts\activate       (Windows)
+#   source .venv/bin/activate    (Mac/Linux)
+#   pip install -r requirements.txt
+#
+# NOTE: prophet has heavy native build dependencies (pystan/cmdstanpy).
+# On first install, be prepared for a 5-10 minute build.
+# If it fails, try: pip install prophet --no-cache-dir
+# Or use conda: conda install -c conda-forge prophet
+
+# --- Web Framework ---
+fastapi
+uvicorn[standard]
+python-multipart
+
+# --- Data & Forecasting ---
+pandas
+numpy
+prophet
+
+# --- AI Integration ---
+openai              # Used as Groq SDK (OpenAI-compatible API)
+google-generativeai
+pydantic
+pydantic-settings
+python-dotenv
+
+# --- HTTP (weather service) ---
+requests
